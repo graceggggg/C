@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large JS Example - 100KB</title>
+</head>
+<body>
+    <h1>JavaScript Demo - 100KB</h1>
+    <button id="changeText">Click Me</button>
+    <p id="displayText">Hello, this is a JavaScript-powered page!</p>
+
+    <script>
+        // Change Text Function
+        document.getElementById("changeText").addEventListener("click", function () {
+            document.getElementById("displayText").textContent = "You clicked the button!";
+        });
+
+        // Generate Large Data
+        let largeData = [];
+        for (let i = 0; i < 5000; i++) {
+            largeData.push("Item " + i);
+        }
+        console.log(largeData);
+
+        // DOM Manipulation - Add Elements
+        for (let i = 0; i < 100; i++) {
+           
