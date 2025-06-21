@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Click Email Copy (Material Design Colors)</title>
+    <style>
+        body {margin: 10px;}
+        .copy-button {
+            border: none;
+            color: white;
+            padding: 4px 8px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 4px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* Material Design Inspired Color Palette */
+        /* Red Tones */
+        .color-01 { background-color: #EF5350; } /* Red 400 */
+        .color-01:hover { background-color: #E53935; }
+        .color-02 { background-color: #E53935; } /* Red 500 */
+        .color-02:hover { background-color: #D32F2F; }
+        .color-03 { background-color: #C62828; } /* Red 700 */
+        .color-03:hover { background-color: #B71C1C; }
+        /* Pink Tones */
+        .color-04 { background-color: #EC407A; } /* Pink 400 */
+        .color-04:hover { background-color: #D81B60; }
+        .color-05 { background-color: #D81B60; } /* Pink 600 */
+        .color-05:hover { background-color: #C2185B; }
+        /* Purple Tones */
+        .color-06 { background-color: #AB47BC; } /* Purple 400 */
+        .color-06:hover { background-color: #8E24AA; }
+        .color-07 { background-color: #8E24AA; } /* Purple 600 */
+        .color-07:hover { background-color: #7B1FA2; }
+        .color-08 { background-color: #6A1B9A; } /* Purple 800 */
+        .color-08:hover { background-color: #4A148C; }
+        /* Deep Purple Tones */
+        .color-09 { background-color: #7E57C2; } /* Deep Purple 400 */
+        .color-09:hover { background-color: #673AB7; }
+        .color-10 { background-color: #5E35B1; } /* Deep Purple 600 */
+        .color-10:hover { background-color: #512DA8; }
+        /* Indigo Tones */
+        .color-11 { background-color: #5C6BC0; } /* Indigo 400 */
+        .color-11:hover { background-color: #3F51B5; }
+        .color-12 { background-color: #3949AB; } /* Indigo 600 */
+        .color-12:hover { background-color: #303F9F; }
+        .color-13 { background-color: #283593; } /* Indigo 700 */
+        .color-13:hover { background-color: #1A237E; }
+        /* Blue Tones */
+        .color-14 { background-color: #42A5F5; } /* Blue 400 */
+        .color-14:hover { background-color: #2196F3; }
+        .color-15 { background-color: #1E88E5; } /* Blue 600 */
+        .color-15:hover { background-color: #1976D2; }
+        /* Light Blue Tones */
+        .color-16 { background-color: #29B6F6; } /* Light Blue 400 */
+        .color-16:hover { background-color: #03A9F4; }
+        .color-17 { background-color: #039BE5; } /* Light Blue 600 */
+        .color-17:hover { background-color: #0288D1; }
+        /* Cyan Tones */
+        .color-18 { background-color: #26C6DA; } /* Cyan 400 */
+        .color-18:hover { background-color: #00BCD4; }
+        .color-19 { background-color: #00ACC1; } /* Cyan 600 */
+        .color-19:hover { background-color: #0097A7; }
+        .color-20 { background-color: #00838F; } /* Cyan 800 */
+        .color-20:hover { background-color: #006064; }
+        /* Teal Tones */
+        .color-21 { background-color: #26A69A; } /* Teal 400 */
+        .color-21:hover { background-color: #009688; }
+        .color-22 { background-color: #00897B; } /* Teal 600 */
+        .color-22:hover { background-color: #00796B; }
+        /* Green Tones */
+        .color-23 { background-color: #66BB6A; } /* Green 400 */
+        .color-23:hover { background-color: #4CAF50; }
+        .color-24 { background-color: #43A047; } /* Green 600 */
+        .color-24:hover { background-color: #388E3C; }
+        .color-25 { background-color: #2E7D32; } /* Green 800 */
+        .color-25:hover { background-color: #1B5E20; }
+        /* Light Green Tones */
+        .color-26 { background-color: #9CCC65; } /* Light Green 400 */
+        .color-26:hover { background-color: #8BC34A; }
+        .color-27 { background-color: #7CB342; } /* Light Green 600 */
+        .color-27:hover { background-color: #689F38; }
+        /* Lime Tones */
+        .color-28 { background-color: #D4E157; } /* Lime 400 */
+        .color-28:hover { background-color: #CDDC39; }
+        /* Yellow Tones */
+        .color-29 { background-color: #FFEE58; } /* Yellow 400 */
+        .color-29:hover { background-color: #FFEB3B; }
+        /* Amber Tones */
+        .color-30 { background-color: #FFCA28; } /* Amber 400 */
+        .color-30:hover { background-color: #FFC107; }
+
+        .message {
+            margin-top: 10px;
+            color: green;
+        }
+        .email-container {
+            display: inline-block;
+            margin: 5px 2px;
+        }
+        p{margin:2px;}
+    </style>
+</head>
+<body>
+
+    <h3>Click to Copy Email Address</h3>
+
+    <div class="email-list">
+    <p>
+        <span class="email-container">
+            <button class="copy-button color-01" onclick="copyEmail('bcz23633@toaik.com', 'message-01')">01</button>
+            <span id="message-01" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-02" onclick="copyEmail('lsf94191@toaik.com', 'message-02')">02</button>
+            <span id="message-02" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-03" onclick="copyEmail('vfc30546@jioso.com', 'message-03')">03</button>
+            <span id="message-03" class="message"></span>
+        </span>
+        <span class="email-container">
+           <button class="copy-button color-04" onclick="copyEmail('lri82753@jioso.com', 'message-04')">04</button>
+            <span id="message-04" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-05" onclick="copyEmail('qie32532@toaik.com', 'message-05')">05</button>
+            <span id="message-05" class="message"></span>
+        </span>
+    </p>
+    <p>
+        <span class="email-container">
+            <button class="copy-button color-06" onclick="copyEmail('mmm33507@toaik.com', 'message-06')">06</button>
+            <span id="message-06" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-07" onclick="copyEmail('bty87635@jioso.com', 'message-07')">07</button>
+            <span id="message-07" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-08" onclick="copyEmail('sifigffxcbomfjchsc@nespf.com', 'message-08')">08</button>
+            <span id="message-08" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-09" onclick="copyEmail('dev15954@jioso.com', 'message-09')">09</button>
+            <span id="message-09" class="message"></span>
+        </span>
+        <span class="email-container ">
+            <button class="copy-button color-10" onclick="copyEmail('wxj97436@jioso.com', 'message-10')">10</button>
+            <span id="message-10" class="message"></span>
+        </span>
+    </p>
+    <p>
+        <span class="email-container">
+            <button class="copy-button color-11" onclick="copyEmail('tci13694@jioso.com', 'message-11')">11</button>
+            <span id="message-11" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-12" onclick="copyEmail('fea27091@jioso.com', 'message-12')">12</button>
+            <span id="message-12" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-13" onclick="copyEmail('cem89760@jioso.com', 'message-13')">13</button>
+            <span id="message-13" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-14" onclick="copyEmail('vqf17902@jioso.com', 'message-14')">14</button>
+            <span id="message-14" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-15" onclick="copyEmail('vvn61253@jioso.com', 'message-15')">15</button>
+            <span id="message-15" class="message"></span>
+        </span>
+    </p>
+    <p>
+        <span class="email-container">
+            <button class="copy-button color-16" onclick="copyEmail('yji40644@jioso.com', 'message-16')">16</button>
+            <span id="message-16" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-17" onclick="copyEmail('ell48221@jioso.com', 'message-17')">17</button>
+            <span id="message-17" class="message"></span>   
+        </span>    
+        <span class="email-container">
+            <button class="copy-button color-18" onclick="copyEmail('ytk04847@jioso.com', 'message-18')">18</button>
+            <span id="message-18" class="message"></span>       
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-19" onclick="copyEmail('bcz1920@example.com', 'message-19')">19</button>
+            <span id="message-19" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-20" onclick="copyEmail('lsf2020@example.com', 'message-20')">20</button>
+            <span id="message-20" class="message"></span>
+        </span>
+    </p>
+    <p>
+        <span class="email-container">
+            <button class="copy-button color-21" onclick="copyEmail('random21@example.com', 'message-21')">21</button>
+            <span id="message-21" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-22" onclick="copyEmail('random22@example.com', 'message-22')">22</button>
+            <span id="message-22" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-23" onclick="copyEmail('random23@example.com', 'message-23')">23</button>
+            <span id="message-23" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-24" onclick="copyEmail('random24@example.com', 'message-24')">24</button>
+            <span id="message-24" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-25" onclick="copyEmail('random25@example.com', 'message-25')">25</button>
+            <span id="message-25" class="message"></span>
+        </span>
+    </p>
+    <p>
+        <span class="email-container">
+            <button class="copy-button color-26" onclick="copyEmail('random26@example.com', 'message-26')">26</button>
+            <span id="message-26" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-27" onclick="copyEmail('random27@example.com', 'message-27')">27</button>
+            <span id="message-27" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-28" onclick="copyEmail('random28@example.com', 'message-28')">28</button>
+            <span id="message-28" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-29" onclick="copyEmail('random29@example.com', 'message-29')">29</button>
+            <span id="message-29" class="message"></span>
+        </span>
+        <span class="email-container">
+            <button class="copy-button color-30" onclick="copyEmail('random30@example.com', 'message-30')">30</button>
+            <span id="message-30" class="message"></span>
+        </span>
+    </p>
+    </div>
+
+    <script>
+        async function copyEmail(email, messageElementId) {
+            try {
+                await navigator.clipboard.writeText(email);
+                console.log('Email copied to clipboard: ' + email);
+                const messageElement = document.getElementById(messageElementId);
+                if (messageElement) {
+                    messageElement.textContent = 'Copied!';
+                    setTimeout(() => {
+                        messageElement.textContent = '';
+                    }, 2000);
+                }
+            } catch (err) {
+                console.error('Failed to copy email: ', err);
+                alert('Copy failed. Your browser may not support this feature or requires an HTTPS environment. Please copy manually!');
+            }
+        }
+    </script>
+
+</body>
+</html>
